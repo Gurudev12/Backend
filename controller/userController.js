@@ -19,7 +19,7 @@ const service=require('../services/userServices')
 
 class UserController
 {
-registrationController=(req,res)=>
+registrationController(req,res)
     {
         try{
     
@@ -82,7 +82,7 @@ registrationController=(req,res)=>
     }
     
     /**********************************************************************************************/
-loginController=(req,res)=>
+loginController(req,res)
     {
         try{
      
@@ -94,7 +94,6 @@ loginController=(req,res)=>
     
         let error=req.validationErrors();
         let response={}
-    
         if(error)
         {
             response.success=false
@@ -131,7 +130,7 @@ loginController=(req,res)=>
     
     
     /*Forgot password controller************************************************************************************ */
-forgotPasswordController=(req,res)=>
+forgotPasswordController(req,res)
     {
         try{
             
@@ -175,7 +174,7 @@ forgotPasswordController=(req,res)=>
         }
     }
     
-resetPassword=(req,res)=>{
+resetPassword(req,res){
     
         try{
             console.log("req data",req.body.password);
@@ -221,7 +220,7 @@ resetPassword=(req,res)=>{
     
     }
     /****************newchanges********************************************/ 
-userDataController=(req,res)=>{
+userDataController(req,res){
     
         try{
         let response= {};

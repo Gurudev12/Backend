@@ -29,7 +29,7 @@ const app = express()
 //port no
 // const port=3000;
 require('dotenv').config()
-let PORT=process.env.PORT
+let PORT=4000;
 console.log(PORT)
 
 /*socket part********************************** */
@@ -47,7 +47,7 @@ app.use('/',routes)
 
   
 //Connecting to the database
-mongoose.connect(process.env.mongodbUrl, {useNewUrlParser: true})
+mongoose.connect('mongodb://localhost:27017/ChatApp', {useNewUrlParser: true})
 
 .then(() => {
     console.log("Successfully connected to the database");    
