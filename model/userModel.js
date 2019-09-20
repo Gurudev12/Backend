@@ -56,7 +56,7 @@ let model= mongoose.model('registrationDetail',RegisterSchema);
 
 class UserModel
 {
-    registrationModel=(userDetail,callback)=>{
+    registrationModel(userDetail,callback){
         try{
         model.find({'email':userDetail.email},model.email,(err,data)=>{
     
@@ -98,7 +98,7 @@ class UserModel
     }
     /*login model***************************************************/
     
-loginModel=(loginDetail,callback)=>{
+loginModel(loginDetail,callback){
         try{
             
         model.find({'email':loginDetail.email},(err,data)=>{ //data contain whole user information
@@ -154,7 +154,7 @@ loginModel=(loginDetail,callback)=>{
     }
     /*************************************************************** */
     
-forgotPasswordModel=(forgotPasswordEmail,callback)=>{
+forgotPasswordModel(forgotPasswordEmail,callback){
         
         try{
         model.find({'email':forgotPasswordEmail},(err,data)=>{
@@ -194,7 +194,7 @@ forgotPasswordModel=(forgotPasswordEmail,callback)=>{
         
     }
     /*Reset password****************************************************************** */
-resetPasswordModel=(resetData,callback)=> 
+resetPasswordModel(resetData,callback)
     {
         try{
      
@@ -219,7 +219,7 @@ resetPasswordModel=(resetData,callback)=>
             }
             }
     /********************************newchanges***************************************** */
-userDataModel=(callback)=>{
+userDataModel(callback){
     
         try{
         model.find({},['_id','firstname'],(err,userData)=>{ //it will only return id,firstname from array of user data
