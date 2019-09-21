@@ -13,7 +13,7 @@
  * 
  **************************************************************************/
 var nodemailer=require('nodemailer')
-require('dotenv').config()
+// require('dotenv').config()
 module.exports={
 sendMail(userEmail,newToken,callback)
 {

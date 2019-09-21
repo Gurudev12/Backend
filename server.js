@@ -38,7 +38,7 @@ const chatController=require('./controller/chatController')
 /**************************************** */
 
 app.use(cors())
-app.use(express.static("../FrontEnd"));
+app.use(express.static("../Frontend"));
 
 app.use(bodyparser.json())
 app.use(validator())
