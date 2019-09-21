@@ -25,10 +25,7 @@ var cors= require('cors')
 
 //use express method and assign to variable app.
 const app = express()
- 
-//port no
-// const port=3000;
-// require('dotenv').config()
+
 let PORT=4000;
 console.log(PORT)
 
