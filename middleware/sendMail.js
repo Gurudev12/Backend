@@ -34,7 +34,8 @@ var mailOption={
     subject:'sending mail using node js',
     text:'Reset password',
     // following href is url of the state(url:)
-    html:'<p>this is link to reset</p><a href="http://localhost:4000/#/resetPassword'+newToken+'">Reset PassWord</a>'
+    // html:'<p>this is link to reset</p><a href="http://localhost:4000/#/resetPassword'+newToken+'">Reset PassWord</a>'
+    html:'<p>this is link to reset</p><a href="http://18.217.137.107:4000/resetPassword'+newToken+'">Reset PassWord</a>'
     }
 transporter.sendMail(mailOption,function(err,info){
     if(err)

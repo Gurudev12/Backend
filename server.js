@@ -62,11 +62,11 @@ const server=app.listen(PORT,()=>{
 //Bind the socket.IO with the http server
 const io=socketIo(server);
 
-io.on('connection',(socket)=>{
+io.on("connection",(socket)=>{
     console.log("Socket connected");
 
 
-    socket.on('messageContainer',(message)=>{
+    socket.on("messageContainer",(message)=>{
         
         chatController.chatAppDetailController(message,(err,messageData)=>{
             if(err)
@@ -75,7 +75,7 @@ io.on('connection',(socket)=>{
             }
             else{
                 console.log("Message data comming from client side====>",messageData)
-                io.emit("message",messageData);
+                io.emit("messageEvent",messageData);
             }
         })
     })
