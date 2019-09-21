@@ -29,7 +29,7 @@ var transporter=nodemailer.createTransport({
 });
 
 var mailOption={
-    from:process.env.userEmail,
+    from:'murkargurudev@gmail.com',
     to:userEmail,
     subject:'sending mail using node js',
     text:'Reset password',
