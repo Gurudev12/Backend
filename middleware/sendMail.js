@@ -23,8 +23,8 @@ var transporter=nodemailer.createTransport({
     auth:{
         // user:'murkargurudev@gmail.com',
         // pass:'gurudev123'
-        user:process.env.userEmail,
-        pass:process.env.userPassword
+        user:'murkargurudev@gmail.com',
+        pass:'gurudev123'
     }
 });
 
