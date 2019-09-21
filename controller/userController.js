@@ -115,8 +115,6 @@ loginController(req,res)
                     return res.status(400).send(response)
                 }
                 else{
-                    response.success=true;
-                    response.message="Login Sucessfully done."
                     response.content=data;
                     return res.status(200).send(response)
                 }

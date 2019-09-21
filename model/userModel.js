@@ -134,7 +134,7 @@ loginModel(loginDetail,callback){
                                token:newToken
                                     }
                               }
-                              console.log("model data",loginResponse)
+                       console.log("model data",loginResponse)
                        callback(null,loginResponse)
                     }
                     else if(res===false)
